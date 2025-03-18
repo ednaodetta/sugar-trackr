@@ -1,0 +1,283 @@
+body{
+    background: linear-gradient(135deg, #32CD32, #800080);
+    background: linear-gradient(135deg, #8cfff9, #d6b0ff);
+}
+
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 16px;
+    color: #5a3d2b;
+    margin-bottom: 5px;
+}
+
+.risk {
+    font-size: 22px;
+    font-weight: bold;
+    color: #5a3d2b;
+    margin-bottom: 15px;
+}
+
+.progress-container {
+    position: relative;
+    width: 100%;
+    margin: 20px 0 50px; /* Tambah lebih banyak margin bawah */
+}
+
+.progress-bar {
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(to right, green 50%, red 50%);
+    border-radius: 10px;
+}
+
+.indicator {
+    position: absolute;
+    left: 80%; /* Sesuaikan posisi sesuai level risiko */
+    bottom: -50px; /* Lebih jauh dari progress bar */
+    transform: translateX(-50%);
+}
+
+.indicator .tooltip {
+    background: black;
+    height: 13px;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    position: absolute;
+    bottom: 7px; /* Tambah jarak lebih besar */
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.indicator .arrow {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 12px solid black;
+    position: absolute;
+    bottom: 38px; /* Naik sedikit agar tetap menyatu */
+    left: 70%;
+    transform: translateX(-50%);
+}
+
+.description {
+    font-size: 14px;
+    color: #5a3d2b;
+    margin-top: 10px;
+}
+/* .hasil .text{
+    font-family: gotham;
+    margin: 5px;
+}
+
+.hasil .text h1{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+
+.hasil{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.hasil{
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
+    /* margin: 80px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color:rgb(134, 245, 147);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin-left: 120px;
+    margin-right: 120px;
+} */ 
+
+.page-wrapper a:hover{
+    color: #006669;
+}
+
+.post-slider {
+    position: relative;
+    width: 100%;
+}
+
+.slider-arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none; /* Biarkan klik tetap bisa ke slide */
+}
+
+.post-slider .next, .post-slider .prev {
+    font-size: 2em;
+    color: #006669;
+    cursor: pointer;
+    pointer-events: auto; /* Aktifkan klik */
+    z-index: 1000; /* Pastikan di atas slider */
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.post-slider .next {
+    position: absolute;
+    top: 50%;
+    right: 50px; /* Kurangi jarak dari tepi kanan */
+    transform: translateY(-50%);
+    font-size: 2em;
+    color: #006669;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.post-slider .prev {
+    position: absolute;
+    top: 50%;
+    left: 50px; /* Kurangi jarak dari tepi kiri */
+    transform: translateY(-50%);
+    font-size: 2em;
+    color: #006669;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.post-slider .slider-title{
+    text-align: center;
+    margin: 10px auto;
+
+}
+
+.post-slider .post-wrapper{
+    width: 84%;
+    overflow: hidden;
+    height: 350px;
+    margin: 0px auto;
+    padding: 10px 0px 10px 0px;
+}
+
+.post-slider .post-wrapper .post{
+    background: white;
+    display: inline-block;
+    margin: 0px 10px;
+    width: 300px;
+    height: 350px;
+    border-radius: 5px;
+    box-shadow: 1rem 1rem 1rem -1rem #a0a0a033
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.post-slider .post-wrapper .post .post-info{
+    height: 130px;
+    padding: 0px 10px;
+}
+
+.post-slider .post-wrapper .post .slider-image{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.luar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolom */
+    grid-template-rows: repeat(2, auto); /* 2 baris */
+    gap: 20px; /* Jarak antar card */
+    justify-content: center;
+    margin: 50px auto;
+    max-width: 80%; /* Supaya tidak terlalu lebar */
+}
+
+
+.card {
+    width: 20vw;
+    height: auto; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: white;
+    transition: background 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    background: #d1e7ff;
+}
+
+.card img {
+    width: 100%;
+    height: 200px; /* Samakan tinggi gambar */
+    object-fit: cover; /* Pastikan gambar tidak terdistorsi */
+}
+
+.card-content {
+    padding: 15px;
+    flex-grow: 1; /* Pastikan isi card menyesuaikan */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Rapi dan seimbang */
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-meta {
+    font-style: italic;
+    color: gray;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.judul2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-slider .post-wrapper .post:hover {
+    transform: scale(1.08); /* Perbesar card saat hover */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Tambahkan efek bayangan */
+    transition: transform 0.4s cubic-bezier(0.3, 0, 0.3, 1), 
+    box-shadow 0.4s cubic-bezier(0.3, 0, 0.3, 1);
+}
+
+.post-slider .post-wrapper .post:not(:hover) {
+    transform: scale(1);
+    transition: transform 0.4s cubic-bezier(0.3, 0, 0.3, 1), 
+                box-shadow 0.4s cubic-bezier(0.3, 0, 0.3, 1);
+}
+
+a {
+    text-decoration: none; /* Menghilangkan garis bawah */
+    color: inherit; /* Menggunakan warna teks default */
+}
