@@ -1,21 +1,407 @@
 <html>
-    <body bgcolor=#d4a3ae>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+        <style>
+           /* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #32CD32, #800080);
+    /* color: #333; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: fadeIn 1s ease-out;
+}
 
-        <center>
+h1 {
+    font-size: 27px;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: slideIn 0.5s ease-out;
+}
 
-        <h1> IRIS FLOWER DETECTION </h1><br>
+h2 {
+    font-size: 12px;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: slideIn 0.5s ease-out;
+}
+
+.container {
+    background: #ffffff;
+    padding: 50px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    z-index: 1;
+}
+
+
+.form-group {
+    margin-bottom: 40px;
+    text-align: left;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    transition: margin-bottom 0.3s ease; /* Smooth margin transition */
+}
+
+.form-group.expanded {
+    margin-bottom: 60px; /* Increase space when expanded */
+}
+
+label {
+    font-weight: 500;
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+select, input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 8px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    outline: none;
+    background-color: #f5f5f5;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+select:focus, input[type="number"]:focus, input[type="text"]:focus {
+    border-color: #74ebd5;
+    background-color: #fff;
+    transform: scale(1.05);
+}
+
+.form-description {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+}
+
+.submit-btn {
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.3s ease, background 0.3s ease;
+    animation: bounceIn 1s ease-out;
+}
+
+.submit-btn:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(45deg, #0072ff, #00c6ff);
+}
+
+.image-container {
+                margin-bottom: 40px;
+                animation: fadeIn 1s ease-out;
+            }
+
+
+.footer {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.bmi-calculator {
+    position: fixed; /* Keep it fixed on the right side */
+    top: 36%;
+    right: 2.5%;
+    transform: translateY(-50%); /* Center it vertically */
+    width: 300px; /* Adjust width */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.4); /* Make the background 80% opaque */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.explanation {
+    position: fixed; /* Keep it fixed on the right side */
+    top: 81%;
+    right: 2.5%;
+    transform: translateY(-50%); /* Center it vertically */
+    width: 300px; /* Adjust width */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.4); /* Make the background 80% opaque */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.explanation {
+    font-size: 14px; /* Adjust this value to make the text smaller */
+}
+.explanation ul {
+    font-size: 14px; /* This makes the text in the list smaller */
+}
+.explanation p {
+    font-size: 16px; /* This makes the paragraph text smaller */
+    padding-left: 39px; /* Adjust the padding as needed */
+}
+.explanation h3, .explanation h4 {
+    font-size: 18px; /* You can adjust the headings as well */
+}
+
+.bmi-calculator h2 {
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+
+.bmi-calculator .form-group {
+    margin-bottom: 20px;
+}
+
+.bmi-calculator input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 8px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    outline: none;
+    background-color: #f5f5f5;
+}
+
+.bmi-calculator button {
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.bmi-calculator button:hover {
+    background: linear-gradient(45deg, #0072ff, #00c6ff);
+}
+
+.bmi-calculator .explanation {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: left;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    /* theme color */
+    background: linear-gradient(135deg, #8cfff9, #d6b0ff);
+}
+
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Let Sugar-Trackr do the job!</h1>
+            <h2>Empower your health journey and stay one step ahead</h2>
+
+<div class="image-container">
+                <img src="static/SugarTrackrFriends.png" alt="SugarTrackr Friends" style="max-width: 350px; width: 90%; border-radius: 12px">
+            </div>
+
+            <form method="POST" action="{{url_for('home')}}">
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender">
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <p class="form-description">Select your gender</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age" placeholder="Enter age" step="any" required>
+                    <p class="form-description">Enter your age in years</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="hypertension">Hypertension</label>
+                    <select name="hypertension" id="hypertension">
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                    <p class="form-description">Do you have hypertension?</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="heart_disease">Heart Disease</label>
+                    <select name="heart_disease" id="heart_disease">
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                    <p class="form-description">Do you have a history of heart disease?</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="smoking_history">Smoking History</label>
+                    <select name="smoking_history" id="smoking_history">
+                        <option value="" selected disabled>Select your smoking history</option>
+                        <option value="never smoked">Never Smoked</option>
+                        <option value="former smoker">Former Smoker</option>
+                        <option value="current smoker">Current Smoker</option>
+                    </select>
+                    <p class="form-description">What is your smoking history?</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="bmi">BMI (Body Mass Index)</label>
+                    <input type="number" name="bmi" id="bmi" placeholder="Enter BMI" step="any" required>
+                    <p class="form-description">Enter your Body Mass Index (BMI)</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="HbA1c_level">HbA1c Level</label>
+                    <input type="number" name="HbA1c_level" id="HbA1c_level" placeholder="Enter HbA1c level" step="any" required>
+                    <p class="form-description">Enter your HbA1c level percentage</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="blood_glucose_level">Blood Glucose Level</label>
+                    <input type="number" name="blood_glucose_level" id="blood_glucose_level" placeholder="Enter blood glucose level" step="any" required>
+                    <p class="form-description">Enter your blood glucose level</p>
+                </div>
+
+                <button class="submit-btn" type="submit">Predict!</button>
+            </form>
+        </div>
+
+        <div class="bmi-calculator">
+    <h2><strong>BMI Calculator</strong></h2>
+    <form id="bmiForm">
+        <div class="form-group">
+            <label for="height">Height (meters)</label>
+            <input type="number" id="height" placeholder="Enter height in meters" step="any" required>
+        </div>
+        <div class="form-group">
+            <label for="weight">Weight (kg)</label>
+            <input type="number" id="weight" placeholder="Enter weight in kg" step="any" required>
+        </div>
+        <div class="form-group">
+            <button type="button" onclick="calculateBMI()">Calculate BMI</button>
+        </div>
+        <div class="form-group">
+            <label for="bmiResult">Your BMI</label>
+            <input type="text" id="bmiResult" readonly placeholder="BMI result will appear here">
+        </div>
+    </form>
+
+</div>
+
+
+    <div class="explanation">
+<p><strong>BMI categories</strong></p>
+    <ul>
+        <li>BMI < 18.5: underweight</li>
+        <li>BMI 18.5 - 24.9: healthy weight</li>
+        <li>BMI 25 - 29.9: overweight</li>
+        <li>BMI > 30: obesity</li>
+    </ul>
+</div></div>
+
+
+        <script>
+    document.querySelectorAll('select').forEach(select => {
+        select.addEventListener('focus', () => {
+            select.closest('.form-group').classList.add('expanded');
+        });
+
+        select.addEventListener('blur', () => {
+            select.closest('.form-group').classList.remove('expanded');
+        });
+    });
+
+    function calculateBMI() {
+        const height = parseFloat(document.getElementById("height").value);
+        const weight = parseFloat(document.getElementById("weight").value);
         
-        <form method="POST", action="{{url_for('home')}}">
-           <b> First value :  <input type="text", name='a', placeholder="enter 1"> <br><br>
-            Second value :  <input type="text", name='b', placeholder="enter 2"> <br><br>
-            Third value :  <input type="text", name='c', placeholder="enter 3"> <br><br>
-            Fourth value : <input type="text", name='d', placeholder="enter 4"> <br><br><br></b>
-            <input type="submit" , value='predict!' >
-        </form>
-
-        <img src='static\flower1.jpg' alt="flower">
-        
-    </center>
+        if (height > 0 && weight > 0) {
+            const bmi = weight / (height * height);
+            document.getElementById("bmiResult").value = bmi.toFixed(2);
+        } else {
+            alert("Please enter valid height and weight values.");
+        }
+    }
+</script>
 
     </body>
 </html>
