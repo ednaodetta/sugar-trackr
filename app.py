@@ -9,15 +9,15 @@ app = Flask(__name__)
 
 
 @app.route('/form')
-def man():
+def form():
     return render_template('html/form.html')
 
 @app.route('/result_diabetes')
-def man():
+def result_diabetes():
     return render_template('html/result_diabetes.html')
 
 @app.route('/result_nondiabetes')
-def man():
+def result_nondiabetes():
     return render_template('html/result_nondiabetes.html')
 
 
