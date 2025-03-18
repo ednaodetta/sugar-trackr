@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/static/css/form.css">
+    </head>
+
+    <body>
+
+        <div class="left">
+    <div>
+        <img class="logo" src="static/logo.png" alt="SugarTrackr Logo">
+        <p class="bold">Apakah kamu berisiko diabetes tipe 2?</p>
+        <p>Diabetes ditandai dengan tingginya kadar gula darah tubuh. Jika tidak dikontrol, dapat terjadi serangan jantung, Stroke, atau kerusakan ginjal. Menghitung risikonya dapat membantu mencegah kemungkinan komplikasi penyakit tersebut.</p>
+    </div>
+    <p class="bold">Waspada!</p>
+    <div class="item">
+        <img src="static/warning.png" alt="Warning Icon">
+        <p>Gejala awal adalah sering buang air kecil dan merasa haus dan lapar</p>
+    </div>
+    <div class="item">
+        <img src="static/family.png" alt="Family Icon">
+        <p>Riwayat keluarga juga dapat meningkatkan risiko Diabetes</p>
+    </div>
+</div>
+
+
+        <div class="container">
+            <h1>Let Sugar-Trackr do the job!</h1>
+            <h2>Empower your health journey and stay one step ahead</h2>
+
+<div class="image-container">
+                <img src="static/SugarTrackrFriends.png" alt="SugarTrackr Friends" style="max-width: 350px; width: 90%; border-radius: 12px">
+            </div>
+
+            <form method="POST" action="{{url_for('home')}}">
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender">
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <p class="form-description">Select your gender</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age" placeholder="Enter age" step="any" required>
+                    <p class="form-description">Enter your age in years</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="hypertension">Hypertension</label>
+                    <select name="hypertension" id="hypertension">
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                    <p class="form-description">Do you have hypertension?</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="heart_disease">Heart Disease</label>
+                    <select name="heart_disease" id="heart_disease">
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                    <p class="form-description">Do you have a history of heart disease?</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="smoking_history">Smoking History</label>
+                    <select name="smoking_history" id="smoking_history">
+                        <option value="" selected disabled>Select your smoking history</option>
+                        <option value="never smoked">Never Smoked</option>
+                        <option value="former smoker">Former Smoker</option>
+                        <option value="current smoker">Current Smoker</option>
+                    </select>
+                    <p class="form-description">What is your smoking history?</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="bmi">BMI (Body Mass Index)</label>
+                    <input type="number" name="bmi" id="bmi" placeholder="Enter BMI" step="any" required>
+                    <p class="form-description">Enter your Body Mass Index (BMI)</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="HbA1c_level">HbA1c Level</label>
+                    <input type="number" name="HbA1c_level" id="HbA1c_level" placeholder="Enter HbA1c level" step="any" required>
+                    <p class="form-description">Enter your HbA1c level percentage</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="blood_glucose_level">Blood Glucose Level</label>
+                    <input type="number" name="blood_glucose_level" id="blood_glucose_level" placeholder="Enter blood glucose level" step="any" required>
+                    <p class="form-description">Enter your blood glucose level</p>
+                </div>
+
+                <button class="submit-btn" type="submit">Predict!</button>
+            </form>
+        </div>
+
+        <div class="bmi-calculator">
+    <h2><strong>BMI Calculator</strong></h2>
+    <form id="bmiForm">
+        <div class="form-group">
+            <label for="height">Height (meters)</label>
+            <input type="number" id="height" placeholder="Enter height in meters" step="any" required>
+        </div>
+        <div class="form-group">
+            <label for="weight">Weight (kg)</label>
+            <input type="number" id="weight" placeholder="Enter weight in kg" step="any" required>
+        </div>
+        <div class="form-group">
+            <button type="button" onclick="calculateBMI()">Calculate BMI</button>
+        </div>
+        <div class="form-group">
+            <label for="bmiResult">Your BMI</label>
+            <input type="text" id="bmiResult" readonly placeholder="BMI result will appear here">
+        </div>
+    </form>
+
+</div>
+
+
+    <div class="explanation">
+<p>BMI categories</p>
+    <ul>
+        <li>BMI < 18.5: underweight</li>
+        <li>BMI 18.5 - 24.9: healthy weight</li>
+        <li>BMI 25 - 29.9: overweight</li>
+        <li>BMI > 30: obesity</li>
+    </ul>
+</div></div>
+
+        <script src="/static/js/form.js"></script>
+
+    </body>
+</html>
