@@ -8,9 +8,17 @@ app = Flask(__name__)
 
 
 
-@app.route('/')
+@app.route('/form')
 def man():
     return render_template('html/form.html')
+
+@app.route('/result_diabetes')
+def man():
+    return render_template('html/result_diabetes.html')
+
+@app.route('/result_nondiabetes')
+def man():
+    return render_template('html/result_nondiabetes.html')
 
 
 @app.route('/predict', methods=['POST'])
