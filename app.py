@@ -7,7 +7,6 @@ model = pickle.load(open('iri.pkl', 'rb'))
 app = Flask(__name__)
 
 
-
 @app.route('/form')
 def form():
     return render_template('html/form.html')
