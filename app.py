@@ -20,6 +20,10 @@ def result_diabetes():
 def result_nondiabetes():
     return render_template('html/result_nondiabetes.html')
 
+@app.route('/home')
+def Home():
+    return render_template('html/home.html')
+
 
 @app.route('/predict', methods=['POST'])
 def home():

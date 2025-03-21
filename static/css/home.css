@@ -1,0 +1,448 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    align-items: center;
+    padding: 22px 100px;
+    background: linear-gradient(135deg, #5effff, #d6b0ff);
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 55px;
+    height: auto;
+    margin-right: 10px;
+}
+
+span {
+    font-size: 30px;
+    color: #0077cc;
+    padding: 10px 7px;
+}
+
+.explore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#exploreButton {
+    font-family: 'Poppins', sans-serif;
+    padding: 8px 20px;
+    background-color: #00aaff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#exploreButton:hover {
+    background-color: #0077cc;
+}
+
+#predictionButton {
+    font-family: 'Poppins', sans-serif;
+    padding: 6px 20px;
+    background-color: transparent;
+    border: 1.5px solid #0077cc;
+    color: #0077cc;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 20px;
+}
+
+#predictionButton:hover {
+    background-color: #0077cc;
+    color: white;
+    border-color: #0077cc;
+}
+
+.diabetesTesting {
+    margin-top: 60px;
+    margin-left: 171px;
+    font-weight: 100;
+    font-size: 33px;
+    color: #004f87;
+}
+
+.why-get-tested .content .text h3 {
+    font-weight: 100;
+    font-size: 33px;
+    margin-bottom: -7px;
+    color: #004f87;
+}
+
+.aboutOurPrediction .content .text h3 {
+    margin-top: 0px;
+    font-weight: 100;
+    font-size: 33px;
+    margin-bottom: -7px;
+    color: #004f87;
+}
+
+.why-get-tested h2 {
+    font-weight: 50;
+    font-size: 23px;
+    color: #004f87;
+}
+
+.aboutOurPrediction h2 {
+    font-weight: 50;
+    font-size: 23px;
+    color: #004f87;
+}
+
+.diabetes-testing {
+    background-color: rgba(222, 249, 255, 0.45);
+    padding: 40px;
+    margin-top: 20px;
+    border-radius: 8px;
+    max-width: 1070px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 1px 0px rgba(0, 119, 204, 0.7);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.diabetes-testing h2 {
+    font-size: 28px;
+    color: #0077cc;
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+
+.diabetes-testing h3 {
+    line-height: 3;
+    margin-top: 0;
+    padding-top: 0;
+    color: #00849c;
+}
+
+.diabetes-testing .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.diabetes-testing .text {
+    width: 60%;
+}
+
+.diabetes-testing .text ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    line-height: 2.3;
+    font-size: 16px;
+    margin-top: -20px;
+}
+
+.diabetes-testing .image {
+    width: 40%;
+    margin-right: -70px;
+    margin-left: 20px;
+}
+
+.diabetes-testing .image img {
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 0 0.9px 0px rgba(1, 9, 10, 0.5);
+}
+
+.predictionOnly {
+    margin-left: 171px;
+    font-weight: 100;
+    font-size: 15px;
+    color: black;
+}
+
+.why-get-tested {
+    padding: 40px;
+    margin-top: 20px;
+    max-width: 1145px;
+    margin-left: auto;
+    margin-right: auto;
+    /* No background */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.aboutOurPrediction {
+    padding: 40px;
+    margin-top: -200px;
+    max-width: 1145px;
+    margin-left: auto;
+    margin-right: auto;
+    /* No background */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.aboutOurPrediction {
+    padding: 40px;
+    padding-top: 0px;
+    margin-top: 20px;
+    max-width: 1145px;
+    margin-left: auto;
+    margin-right: auto;
+    /* No background */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.why-get-tested .text {
+    width: 90%;
+}
+
+.aboutOurPrediction .text {
+    width: 90%;
+}
+
+.why-get-tested .text p {
+    line-height: 2;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.aboutOurPrediction .text p {
+    line-height: 2;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.sidebar {
+    width: 280px;
+    height: 40%;
+    /* Adjusted width */
+    background-color: #f4f9fd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+    /* Space from top content */
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar:hover {
+    transform: translateY(-5px);
+    /* Hover effect */
+}
+
+.sidebar h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #004f87;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #0077cc;
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #0077cc;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #004f87;
+    font-weight: 600;
+}
+
+.sidebar ul li a:active {
+    color: #0077cc;
+    font-weight: 700;
+}
+
+.sidebar ul {
+    margin-top: 0px;
+}
+
+/* Main section style */
+.healing-starts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 165px;
+    padding-right: -20px;
+    background-color: white;
+    padding-bottom: 70px;
+}
+
+/* Content wrapper */
+.healing-starts .content {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    max-width: 1140px;
+    width: 100%;
+}
+
+/* Text section */
+.healing-starts .content .text {
+    flex: 1;
+    max-width: 700px;
+
+}
+
+/* Heading and subheading styles */
+.healing-starts .content .text h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #004f87;
+    margin-bottom: 15px;
+}
+
+.healing-starts .content .text .subheading {
+    font-size: 18px;
+    color: #0077cc;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* Paragraph styling */
+.healing-starts .content .text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Top-ranked header styling */
+.healing-starts .content .text h2 {
+    font-size: 20px;
+    color: #0077cc;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+/* Link styling */
+.healing-starts .content .text a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+.healing-starts .content .text a:hover {
+    text-decoration: underline;
+}
+
+/* Call to action button */
+.healing-starts .content .text .cta-button {
+    padding: 12px 30px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.healing-starts .content .text .cta-button:hover {
+    background-color: #005fa3;
+}
+
+/* Image section */
+.healing-starts .content .image {
+    flex: 1;
+    max-width: 260px;
+}
+
+/* Image styling */
+.healing-starts .content .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-left: 100px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Add this to your existing CSS */
+
+/* Positioning the button at the bottom of the page */
+/* Position the button at the bottom of the screen */
+.prediction-btn-wrapper {
+    position:relative;
+    margin-top: 10px;
+    margin-left: 420px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+/* Styling the animated prediction button */
+.predictionButtonAnimated {
+    padding: 12px 25px;
+    background-color: #0077cc;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 119, 204, 0.5);
+    font-weight: 600;
+}
+
+/* Button hover effect */
+.predictionButtonAnimated:hover {
+    background-color: #005fa3;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 119, 204, 0.7);
+    animation: pulse 1.5s infinite;
+}
+
+/* Pulse effect for the button */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
