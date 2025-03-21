@@ -1,136 +1,49 @@
-body{
-    background: linear-gradient(135deg, #32CD32, #800080);
-    background: linear-gradient(135deg, #8cfff9, #d6b0ff);
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 1px;
 }
 
+body{
+    background-color: white;
+}
 
 .container {
-    max-width: 400px;
-    margin: 50px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    max-width: 100%; /* Lebar container diperbesar */
+    background: linear-gradient(135deg,rgb(255, 0, 0), #d6b0ff); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px 50px 0px;
+    text-align: center;
 }
 
 .title {
-    font-size: 16px;
-    color: #5a3d2b;
-    margin-bottom: 5px;
-}
-
-.risk {
-    font-size: 22px;
-    font-weight: bold;
-    color: #5a3d2b;
-    margin-bottom: 15px;
-}
-
-.progress-container {
-    position: relative;
-    width: 100%;
-    margin: 20px 0 50px; /* Tambah lebih banyak margin bawah */
-}
-
-.progress-bar {
-    width: 100%;
-    height: 15px;
-    background: linear-gradient(to right, green 50%, red 50%);
-    border-radius: 10px;
-}
-
-.indicator {
-    position: absolute;
-    left: 80%; /* Sesuaikan posisi sesuai level risiko */
-    bottom: -50px; /* Lebih jauh dari progress bar */
-    transform: translateX(-50%);
-}
-
-.indicator .tooltip {
-    background: black;
-    height: 13px;
-    color: white;
-    padding: 6px 12px;
-    border-radius: 12px;
-    font-size: 14px;
-    position: absolute;
-    bottom: 7px; /* Tambah jarak lebih besar */
-    left: 50%;
-    transform: translateX(-50%);
-
-}
-
-.indicator .arrow {
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 12px solid black;
-    position: absolute;
-    bottom: 38px; /* Naik sedikit agar tetap menyatu */
-    left: 70%;
-    transform: translateX(-50%);
-}
-
-.description {
-    font-size: 14px;
-    color: #5a3d2b;
-    margin-top: 10px;
-}
-/* .hasil .text{
-    font-family: gotham;
-    margin: 5px;
-}
-
-.hasil .text h1{
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-    margin: 10px;
-}
-
-.hasil{
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
+    font-size: 30px;
+    font-weight: 900;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    color:rgb(0, 98, 168); /* Warna coklat gelap */   
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
+.face img {
+    width: 200px; /* Menyesuaikan ukuran gambar */
+    height: auto;
 }
 
-.hasil{
-    display: flex;
-    justify-content: center;
-    /* border: 1px solid black; */
-    /* margin: 80px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color:rgb(134, 245, 147);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    margin-left: 120px;
-    margin-right: 120px;
-} */ 
+.result {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 15px;
+    color:rgb(0, 98, 168); /* Warna coklat gelap */
+}   
 
-.page-wrapper a:hover{
-    color: #006669;
-}
-
-.post-slider {
-    position: relative;
-    width: 100%;
-}
-
-.slider-arrows {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    pointer-events: none; /* Biarkan klik tetap bisa ke slide */
-}
 
 .post-slider .next, .post-slider .prev {
     font-size: 2em;
@@ -144,7 +57,7 @@ a{
 
 .post-slider .next {
     position: absolute;
-    top: 50%;
+    top: 89%;
     right: 50px; /* Kurangi jarak dari tepi kanan */
     transform: translateY(-50%);
     font-size: 2em;
@@ -156,7 +69,7 @@ a{
 
 .post-slider .prev {
     position: absolute;
-    top: 50%;
+    top: 89%;
     left: 50px; /* Kurangi jarak dari tepi kiri */
     transform: translateY(-50%);
     font-size: 2em;
