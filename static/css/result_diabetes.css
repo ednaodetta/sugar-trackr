@@ -35,6 +35,8 @@ body{
 .face img {
     width: 200px; /* Menyesuaikan ukuran gambar */
     height: auto;
+    margin-top: 20px; /* Jarak antara gambar dan teks */
+    margin-bottom: 10px; /* Jarak antara gambar dan teks */
 }
 
 .result {
@@ -91,6 +93,7 @@ body{
     height: 350px;
     margin: 0px auto;
     padding: 10px 0px 10px 0px;
+
 }
 
 .post-slider .post-wrapper .post{
@@ -100,7 +103,7 @@ body{
     width: 300px;
     height: 350px;
     border-radius: 5px;
-    box-shadow: 1rem 1rem 1rem -1rem #a0a0a033
+    box-shadow: 1rem 1rem 1rem -1rem #a0a0a033;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
