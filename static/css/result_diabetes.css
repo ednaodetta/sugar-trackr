@@ -241,3 +241,163 @@ body{
     padding-top: 10px;
     border-top: 1px solid #eee;
 }
+
+.arrow-down {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 70px auto 0;
+}
+
+.arrow-down::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    transform: rotate(45deg);
+    animation: arrowPulse 1.5s infinite;
+}
+
+@keyframes arrowPulse {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-10px, -10px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(10px, 10px);
+    }
+}
+
+/* /* ANIMASI HOVER YANG LEBIH RAPI */
+.post-slider .post-wrapper .post {
+    position: relative;
+    z-index: 1;
+    transition: 
+        transform 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28),
+        box-shadow 0.4s ease !important;
+    contain: content;
+}
+
+.post-slider .post-wrapper .post:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+    z-index: 2 !important;
+}
+
+.post-slider .post-wrapper .post .slider-image {
+    transform: scale(1);
+    transition: transform 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28) !important;
+    backface-visibility: hidden;
+}
+
+.post-slider .post-wrapper .post:hover .slider-image {
+    transform: scale(1.03) !important;
+}
+
+.post-slider .post-wrapper .post .post-info {
+    transition: all 0.3s ease 0.1s !important;
+    transform: translateZ(0);
+}
+
+.post-slider .post-wrapper .post:hover .post-info {
+    background-color: rgba(248, 249, 250, 0.95) !important;
+}
+
+.post-slider .post-wrapper .post h4 {
+    transition: all 0.3s ease !important;
+    transform: translateZ(0);
+}
+
+.post-slider .post-wrapper .post:hover h4:first-child {
+    color: #2a80e8 !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Perbaikan ukuran yang konsisten */
+.post-slider .post-wrapper {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.post-slider .post-wrapper .post {
+    transform-style: preserve-3d;
+}
+
+/* Navigasi yang lebih smooth */
+.post-slider .next, .post-slider .prev {
+    transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) !important;
+    transform-style: preserve-3d;
+}
+
+.post-slider .next:hover, .post-slider .prev:hover {
+    transform: translateY(-50%) scale(1.08) !important;
+}/* ANIMASI HOVER YANG LEBIH RAPI */
+.post-slider .post-wrapper .post {
+    position: relative;
+    z-index: 1;
+    transition: 
+        transform 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28),
+        box-shadow 0.4s ease !important;
+    contain: content;
+}
+
+.post-slider .post-wrapper .post:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+    z-index: 2 !important;
+}
+
+.post-slider .post-wrapper .post .slider-image {
+    transform: scale(1);
+    transition: transform 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28) !important;
+    backface-visibility: hidden;
+}
+
+.post-slider .post-wrapper .post:hover .slider-image {
+    transform: scale(1.03) !important;
+}
+
+.post-slider .post-wrapper .post .post-info {
+    transition: all 0.3s ease 0.1s !important;
+    transform: translateZ(0);
+}
+
+.post-slider .post-wrapper .post:hover .post-info {
+    background-color: rgba(248, 249, 250, 0.95) !important;
+}
+
+.post-slider .post-wrapper .post h4 {
+    transition: all 0.3s ease !important;
+    transform: translateZ(0);
+}
+
+.post-slider .post-wrapper .post:hover h4:first-child {
+    color: #2a80e8 !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Perbaikan ukuran yang konsisten */
+.post-slider .post-wrapper {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.post-slider .post-wrapper .post {
+    transform-style: preserve-3d;
+}
+
+/* Navigasi yang lebih smooth */
+.post-slider .next, .post-slider .prev {
+    transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) !important;
+    transform-style: preserve-3d;
+}
+
+.post-slider .next:hover, .post-slider .prev:hover {
+    transform: translateY(-50%) scale(1.08) !important;
+} */
