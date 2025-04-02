@@ -3,33 +3,38 @@ $(document).ready(function(){
       slidesToShow: 3,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 2000,
-      prevArrow: $('.prev'),  // Pastikan elemen ada di dalam HTML
+      autoplaySpeed: 3000,
+      prevArrow: $('.prev'),
       nextArrow: $('.next'),
+      dots: true,
       responsive: [
         {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 600,
+          breakpoint: 1200,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2
+            slidesToScroll: 1
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 768,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1
           }
         }
       ]
+  });
+  
+  // Add animation on scroll
+  $(window).scroll(function() {
+      $('.card, .post').each(function() {
+          var position = $(this).offset().top;
+          var scroll = $(window).scrollTop();
+          var windowHeight = $(window).height();
+          
+          if (scroll > position - windowHeight + 200) {
+              $(this).addClass('visible');
+          }
+      });
   });
 });
