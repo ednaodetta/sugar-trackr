@@ -95,7 +95,7 @@ body{
 
 .post-slider .next {
     position: absolute;
-    top: 72vw;
+    top: 68vw;
     right: 50px; /* Kurangi jarak dari tepi kanan */
     transform: translateY(-50%);
     font-size: 2em;
@@ -107,7 +107,7 @@ body{
 
 .post-slider .prev {
     position: absolute;
-    top: 72vw;
+    top: 68vw;
     left: 50px; /* Kurangi jarak dari tepi kiri */
     transform: translateY(-50%);
     font-size: 2em;
@@ -400,3 +400,66 @@ a {
 .post-slider .next:hover, .post-slider .prev:hover {
     transform: translateY(-50%) scale(1.08) !important;
 } */
+
+/* PERBAIKAN TYPOGRAPHY CARD */
+.post-slider .post-wrapper .post .post-info {
+    padding: 15px 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+}
+
+/* Gaya Judul Artikel */
+.post-slider .post-wrapper .post h4:first-child {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+    color: #2c3e50 !important;
+    margin: 0 !important;
+    padding-bottom: 8px !important;
+    border-bottom: 1px solid #eee !important;
+    transition: all 0.3s ease !important;
+}
+
+.post-slider .post-wrapper .post:hover h4:first-child {
+    color: #3498db !important;
+    border-bottom-color: #3498db !important;
+}
+
+/* Gaya Author */
+.post-slider .post-wrapper .post h4:nth-child(2) {
+    font-size: 0.85rem !important;
+    color: #555 !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+
+.post-slider .post-wrapper .post h4:nth-child(2)::before {
+    content: "👤";
+    font-size: 0.9rem !important;
+}
+
+/* Gaya Tanggal */
+.post-slider .post-wrapper .post h4:nth-child(3) {
+    font-size: 0.8rem !important;
+    color: #777 !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-style: italic !important;
+}
+
+.post-slider .post-wrapper .post h4:nth-child(3)::before {
+    content: "📅";
+    font-size: 0.9rem !important;
+}
+
+/* Efek Hover untuk Meta Info */
+.post-slider .post-wrapper .post:hover h4:nth-child(2),
+.post-slider .post-wrapper .post:hover h4:nth-child(3) {
+    transform: translateX(3px) !important;
+    color: #444 !important;
+}
