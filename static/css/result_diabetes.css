@@ -1,34 +1,50 @@
 * {
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-    margin: 1px;
+    margin: 0;
+    padding: 0;
 }
 
 body{
     background-color: white;
+    overflow-x: hidden;
+}
+
+@keyframes scaleAnimation {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
 }
 
 .container {
-    padding: 25px;
-    max-width: 100%; /* Lebar container diperbesar */
-    background: linear-gradient(135deg,rgb(255, 0, 0), #d6b0ff); 
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg,rgb(54, 165, 182), #d6b0ff); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 20px 0px 50px 0px;
+    margin-bottom: 120px;
     text-align: center;
+}
+
+.title, .face img, .result {
+    display: inline-block;
+    animation: scaleAnimation 2s infinite ease-in-out;
 }
 
 .title {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 27px;
     font-weight: 900;
-    padding-top: 30px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 40px;
     color:rgb(0, 98, 168); /* Warna coklat gelap */   
 }
 
@@ -40,7 +56,7 @@ body{
 }
 
 .result {
-    font-size: 30px;
+    font-size: 45px;
     font-weight: 500;
     margin-top: 15px;
     color:rgb(0, 98, 168); /* Warna coklat gelap */
@@ -59,7 +75,7 @@ body{
 
 .post-slider .next {
     position: absolute;
-    top: 89%;
+    top: 75vw;
     right: 50px; /* Kurangi jarak dari tepi kanan */
     transform: translateY(-50%);
     font-size: 2em;
@@ -71,7 +87,7 @@ body{
 
 .post-slider .prev {
     position: absolute;
-    top: 89%;
+    top: 75vw;
     left: 50px; /* Kurangi jarak dari tepi kiri */
     transform: translateY(-50%);
     font-size: 2em;
@@ -178,6 +194,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 
 .post-slider .post-wrapper .post:hover {
