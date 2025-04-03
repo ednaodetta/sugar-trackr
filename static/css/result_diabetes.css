@@ -287,7 +287,7 @@ body{
     }
 }
 
-/* /* ANIMASI HOVER YANG LEBIH RAPI */
+/* ANIMASI HOVER YANG LEBIH RAPI */
 .post-slider .post-wrapper .post {
     position: relative;
     z-index: 1;
@@ -319,7 +319,7 @@ body{
 }
 
 .post-slider .post-wrapper .post:hover .post-info {
-    background-color: rgba(248, 249, 250, 0.95) !important;
+    background-color: #ffffff !important; /* Diubah ke putih solid */
 }
 
 .post-slider .post-wrapper .post h4 {
@@ -328,7 +328,6 @@ body{
 }
 
 .post-slider .post-wrapper .post:hover h4:first-child {
-    color: #2a80e8 !important;
     transform: translateY(-2px) !important;
 }
 
@@ -350,70 +349,7 @@ body{
 
 .post-slider .next:hover, .post-slider .prev:hover {
     transform: translateY(-50%) scale(1.08) !important;
-}/* ANIMASI HOVER YANG LEBIH RAPI */
-.post-slider .post-wrapper .post {
-    position: relative;
-    z-index: 1;
-    transition: 
-        transform 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28),
-        box-shadow 0.4s ease !important;
-    contain: content;
 }
-
-.post-slider .post-wrapper .post:hover {
-    transform: translateY(-8px) !important;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
-    z-index: 2 !important;
-}
-
-.post-slider .post-wrapper .post .slider-image {
-    transform: scale(1);
-    transition: transform 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28) !important;
-    backface-visibility: hidden;
-}
-
-.post-slider .post-wrapper .post:hover .slider-image {
-    transform: scale(1.03) !important;
-}
-
-.post-slider .post-wrapper .post .post-info {
-    transition: all 0.3s ease 0.1s !important;
-    transform: translateZ(0);
-}
-
-.post-slider .post-wrapper .post:hover .post-info {
-    background-color: rgba(248, 249, 250, 0.95) !important;
-}
-
-.post-slider .post-wrapper .post h4 {
-    transition: all 0.3s ease !important;
-    transform: translateZ(0);
-}
-
-.post-slider .post-wrapper .post:hover h4:first-child {
-    color: #2a80e8 !important;
-    transform: translateY(-2px) !important;
-}
-
-/* Perbaikan ukuran yang konsisten */
-.post-slider .post-wrapper {
-    perspective: 1000px;
-    transform-style: preserve-3d;
-}
-
-.post-slider .post-wrapper .post {
-    transform-style: preserve-3d;
-}
-
-/* Navigasi yang lebih smooth */
-.post-slider .next, .post-slider .prev {
-    transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28) !important;
-    transform-style: preserve-3d;
-}
-
-.post-slider .next:hover, .post-slider .prev:hover {
-    transform: translateY(-50%) scale(1.08) !important;
-} */
 
 /* PERBAIKAN TYPOGRAPHY CARD */
 .post-slider .post-wrapper .post .post-info {
@@ -423,21 +359,22 @@ body{
     gap: 12px !important;
 }
 
-/* Gaya Judul Artikel */
-.post-slider .post-wrapper .post h4:first-child {
+/* Gaya Judul Artikel - Warna biru dari awal */
+.post-slider .post-wrapper .post h4:first-child a {
     font-size: 1.1rem !important;
     font-weight: 700 !important;
     line-height: 1.4 !important;
-    color: #2c3e50 !important;
+    color: #2a80e8 !important; /* Warna biru dari awal */
     margin: 0 !important;
     padding-bottom: 8px !important;
     border-bottom: 1px solid #eee !important;
     transition: all 0.3s ease !important;
+    text-decoration: none !important;
 }
 
-.post-slider .post-wrapper .post:hover h4:first-child {
-    color: #3498db !important;
-    border-bottom-color: #3498db !important;
+.post-slider .post-wrapper .post:hover h4:first-child a {
+    color: #1a5fb4 !important; /* Warna biru lebih gelap saat hover */
+    border-bottom-color: #1a5fb4 !important;
 }
 
 /* Gaya Author */
@@ -475,7 +412,6 @@ body{
 .post-slider .post-wrapper .post:hover h4:nth-child(2),
 .post-slider .post-wrapper .post:hover h4:nth-child(3) {
     transform: translateX(3px) !important;
-    color: #444 !important;
 }
 
 /* PERBAIKAN BORDER RADIUS KONSISTEN */
@@ -483,10 +419,11 @@ body{
     border-radius: 12px !important;
     overflow: hidden !important;
     transform-style: preserve-3d !important;
+    background-color: #ffffff !important; /* Pastikan background putih */
 }
 
 .post-slider .post-wrapper .post:hover {
-    border-radius: 12px !important; /* Pastikan sama dengan state normal */
+    border-radius: 12px !important;
 }
 
 .post-slider .post-wrapper .post .slider-image {
@@ -499,6 +436,7 @@ body{
 .post-slider .post-wrapper .post .post-info {
     border-bottom-left-radius: 12px !important;
     border-bottom-right-radius: 12px !important;
+    background-color: #ffffff !important; /* Background putih */
 }
 
 /* Animasi yang lebih smooth */
@@ -506,5 +444,23 @@ body{
     transition: 
         transform 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28),
         box-shadow 0.4s ease,
-        border-radius 0.3s ease !important; /* Transisi untuk border-radius */
+        border-radius 0.3s ease !important;
+}
+
+/* Gaya Judul Artikel - Warna biru dari awal tanpa garis bawah saat hover */
+.post-slider .post-wrapper .post h4:first-child a {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+    color: #2a80e8 !important;
+    margin: 0 !important;
+    padding-bottom: 8px !important;
+    border-bottom: 1px solid #eee !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important; /* Pastikan tidak ada garis bawah */
+}
+
+.post-slider .post-wrapper .post:hover h4:first-child a {
+    color: #2a80e8  !important;
+    border-bottom: 1px solid #eee !important; /* Tetap garis bawah abu-abu saat hover */
 }
