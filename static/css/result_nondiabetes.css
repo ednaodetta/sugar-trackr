@@ -241,12 +241,25 @@ body{
     text-decoration: none;
 }
 
+
 .card-meta {
     font-size: 0.9rem;
     color: #666;
     margin-top: auto;
     padding-top: 10px;
     border-top: 1px solid #eee;
+    display: flex;
+    flex-direction: column; /* Ubah ke column layout */
+    gap: 5px; /* Jarak antara author dan date */
+}
+
+.card-author {
+    font-weight: 500;
+}
+
+.card-date {
+    font-style: italic;
+    color: #777;
 }
 
 a {
@@ -355,7 +368,7 @@ a {
     padding: 15px 20px !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 12px !important;
+    gap: 2px !important;
 }
 
 /* Gaya Judul Artikel - Warna biru dari awal */

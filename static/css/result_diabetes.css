@@ -253,8 +253,19 @@ body{
     margin-top: auto;
     padding-top: 10px;
     border-top: 1px solid #eee;
+    display: flex;
+    flex-direction: column; /* Ubah ke column layout */
+    gap: 5px; /* Jarak antara author dan date */
 }
 
+.card-author {
+    font-weight: 500;
+}
+
+.card-date {
+    font-style: italic;
+    color: #777;
+}
 .arrow-down {
     position: relative;
     width: 40px;
@@ -356,7 +367,7 @@ body{
     padding: 15px 20px !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 12px !important;
+    gap: 2px !important;
 }
 
 /* Gaya Judul Artikel - Warna biru dari awal */
@@ -464,3 +475,4 @@ body{
     color: #2a80e8  !important;
     border-bottom: 1px solid #eee !important; /* Tetap garis bawah abu-abu saat hover */
 }
+
