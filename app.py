@@ -32,7 +32,7 @@ def artikel1():
 
 @app.route('/artikel2')
 def artikel2():
-    return render_template('html/artikel2.html')
+    return render_template('html/artikel2.html') 
 
 @app.route('/predict', methods=['POST'])
 def predict():
